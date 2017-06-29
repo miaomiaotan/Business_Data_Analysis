@@ -1,0 +1,165 @@
+{
+ "name": "server",
+ "children": [
+  {
+   "name": "光纤交换机中低档",
+   "children": [
+    {"name": "博科, BR-360-0008", "size": 1296200.0},
+    {"name": "华为, OceanStor SNS2224", "size": 721192.52},
+    {"name": "Lenovo（联想）, Lenovo B300", "size": 655308.0},
+    {"name": "惠普, HP 8/24 Base (16) Full Fabric Ports Enabled SAN Switch", "size": 556900.0},
+    {"name": "博科, BR-6505-12-8G-0R", "size": 435970.0},
+    {"name": "inspur浪潮, FS5900", "size": 409236.0},
+    {"name": "超云, BR-360-0008-A", "size": 307084.0},
+    {"name": "曙光, 曙光6505光纤交换机", "size": 289640.0},
+    {"name": "惠普, HP SN3000B 16Gb 24-port/12-port Active Fibre Channel Switch", "size": 251200.0},
+    {"name": "戴尔, Dell Brocade 300", "size": 249318.0},
+    {"name": "华为, OceanStor SNS2124", "size": 234865.56},
+    {"name": "戴尔, Dell Brocade 6505", "size": 193012.0},
+    {"name": "inspur浪潮, FS6500", "size": 133600.0},
+    {"name": "曙光, 曙光300光纤交换机", "size": 112410.0}
+   ]
+  },
+  {
+   "name": "光纤交换机高档",
+   "children": [
+    {"name": "ChangHong, ChangHong BR6510", "size": 1493776.0},
+    {"name": "华为, OceanStor SNS2248", "size": 763860.68},
+    {"name": "博科, BR-6510-24-8G-R", "size": 627276.0},
+    {"name": "曙光, 曙光6510光纤交换机", "size": 133640.0}
+   ]
+  },
+  {
+   "name": "磁盘阵列中档",
+   "children": [
+    {"name": "华为, OceanStor 5500 V3+128GB缓存", "size": 5460983.08},
+    {"name": "惠普, HP StoreServ 7200C", "size": 4148960.0},
+    {"name": "Lenovo（联想）, Lenovo VNX5200", "size": 3127385.0},
+    {"name": "EMC, VNX5400", "size": 2717127.0},
+    {"name": "NetApp, FAS8020-R6", "size": 765200.0},
+    {"name": "戴尔, Dell Storage SC4020", "size": 670328.0},
+    {"name": "曙光, DS600-G", "size": 650980.0},
+    {"name": "华三（H3C）, UIS-P8200-2N", "size": 582000.0},
+    {"name": "海康威视, DS-A82024D", "size": 576680.0},
+    {"name": "Infortrend（普安）, ESDS 1024", "size": 547036.0},
+    {"name": "inspur浪潮, AS8000-M2", "size": 320000.0},
+    {"name": "MacroSAN（宏杉）, MS3300", "size": 302800.0},
+    {"name": "天融信, TDSM-DBFW-21049", "size": 295280.0},
+    {"name": "数普（Supool）, DS5600", "size": 292896.0},
+    {"name": "PowerLeader（宝德）, GS5316D", "size": 288000.0},
+    {"name": "NetStor, iSUM790", "size": 253700.0},
+    {"name": "爱数（eisoo）, AS5000", "size": 221000.0},
+    {"name": "DFT（迪菲特）, ES-3391-D", "size": 108000.0}
+   ]
+  },
+  {
+   "name": "磁盘阵列低档",
+   "children": [
+    {"name": "华为, OceanStor 5300 V3+64GB缓存", "size": 3851253.4},
+    {"name": "inspur浪潮, AS520E-M1", "size": 1734582.0},
+    {"name": "Lenovo（联想）, Lenovo S3200", "size": 1578733.0},
+    {"name": "戴尔, Dell Storage SCv2000", "size": 1471000.0},
+    {"name": "IBM, IBM Storwize V5000(2078-24C)", "size": 1350000.0},
+    {"name": "惠普, HP MSA1040 Storage", "size": 870800.0},
+    {"name": "数普（Supool）, DS3700", "size": 833328.0},
+    {"name": "NetStor, iSUM790L", "size": 384200.0},
+    {"name": "爱数（eisoo）, S8000", "size": 360000.0},
+    {"name": "EMC, VNXe1600", "size": 132624.0},
+    {"name": "Infortrend（普安）, ESDS 1012", "size": 131722.0},
+    {"name": "MacroSAN（宏杉）, MS2500 G2-12S", "size": 122900.0},
+    {"name": "曙光, DS200-C20", "size": 72800.0},
+    {"name": "超云, SS4000-R12", "size": 49980.0},
+    {"name": "PowerLeader（宝德）, GS5316S", "size": 46200.0},
+    {"name": "云海麒麟, YH-G1610S", "size": 43900.0},
+    {"name": "Cenby新邦, SD828（超高速阵列安全型）桌面存储 16TB", "size": 35700.0},
+    {"name": "鲸鲨, ES2-16S", "size": 17600.0}
+   ]
+  },
+  {
+   "name": "磁盘阵列高档",
+   "children": [
+    {"name": "戴尔, Dell Compellent SC8000", "size": 2558243.0},
+    {"name": "华为, OceanStor 18500 V3+512GB 缓存", "size": 1798771.64},
+    {"name": "ChangHong, ChangHong FAS8040", "size": 1760000.0},
+    {"name": "NetStor, NCS7000", "size": 1173000.0},
+    {"name": "惠普, HP StoreServ 8400", "size": 1169600.0},
+    {"name": "MacroSAN（宏杉）, MS5520", "size": 1159800.0},
+    {"name": "曙光, DS800-G", "size": 1038940.0},
+    {"name": "inspur浪潮, AS18000", "size": 977556.0},
+    {"name": "EMC, VNX5800", "size": 769126.0},
+    {"name": "DCN, NCS4700", "size": 369150.0},
+    {"name": "超云, NS5000", "size": 300000.0},
+    {"name": "海康威视, DS-A82060D", "size": 299220.0},
+    {"name": "长城, MS 3860F", "size": 230000.0},
+    {"name": "紫光, UStor C6816", "size": 209998.0}
+   ]
+  },
+  {
+   "name": "网络附加存储（NAS）中高档",
+   "children": [
+    {"name": "华为, OceanStor 9000 P25+48GB缓存+21.6TB SAS &200GB SSD硬盘", "size": 1264975.17},
+    {"name": "inspur浪潮, AS5600", "size": 1091400.0},
+    {"name": "戴尔, PowerVault MD3860f", "size": 1073996.0},
+    {"name": "戴尔, EqualLogic PS6210E", "size": 970988.0},
+    {"name": "NetApp, FAS8020-R6", "size": 765200.0},
+    {"name": "ChangHong, ChangHong FAS8020", "size": 704800.0},
+    {"name": "曙光, ParaStor200", "size": 686920.0},
+    {"name": "爱数（eisoo）, VXP2400", "size": 630000.0},
+    {"name": "inspur浪潮, AS13000", "size": 492402.0},
+    {"name": "NetStor, NCS5000", "size": 480000.0},
+    {"name": "EMC, X210", "size": 433000.0},
+    {"name": "DFT（迪菲特）, NS-1804E-R1E", "size": 415000.0},
+    {"name": "海康威视, DS-A71048R", "size": 391500.0},
+    {"name": "DCN, NCS4600", "size": 344464.0},
+    {"name": "惠普, HP StoreEasy 1650 48TB SAS Strg", "size": 201000.0},
+    {"name": "MacroSAN（宏杉）, MS3000 G2", "size": 143050.0},
+    {"name": "海康威视, DS-A71036R", "size": 136000.0},
+    {"name": "AMAX, Servmax R XG-22302ST", "size": 106200.0},
+    {"name": "Infortrend（普安）, NAS 3012R1CN", "size": 78000.0},
+    {"name": "AMAX, Servmax R XG-32301ST", "size": 73600.0},
+    {"name": "惠普, HP StoreEasy 1650 16TB SAS Strg", "size": 53200.0},
+    {"name": "LTHPC（联泰集群）, LT- 6048R-E1CR24N", "size": 20145.0}
+   ]
+  },
+  {
+   "name": "网络附加存储（NAS）低档",
+   "children": [
+    {"name": "爱数（eisoo）, VXP1200", "size": 756500.0},
+    {"name": "群晖synology, DS1815+", "size": 621042.0},
+    {"name": "华为, OceanStor 9000 P12+32GB缓存+22TB SATA &200GB SSD硬盘", "size": 497898.66},
+    {"name": "EMC, VNX5600", "size": 360000.0},
+    {"name": "Lenovo（联想）, Lenovo VNX5200-U", "size": 227810.0},
+    {"name": "戴尔, Dell Storage NX3330", "size": 219090.0},
+    {"name": "NetApp, FAS2500-R6", "size": 193000.0},
+    {"name": "ChangHong, ChangHong FAS2552", "size": 175000.0},
+    {"name": "inspur浪潮, AS530N", "size": 156586.0},
+    {"name": "i2, i2Box", "size": 153600.0},
+    {"name": "惠普, HP StoreEasy 1450 8TB SATA Strg", "size": 140000.0},
+    {"name": "数普（Supool）, US1700", "size": 116640.0},
+    {"name": "PowerLeader（宝德）, GS9124IS", "size": 104800.0},
+    {"name": "曙光, DS600-G", "size": 93600.0},
+    {"name": "天融信, TDSM-DBFW-21019", "size": 92050.0},
+    {"name": "量子（ESPAN）, NS-EI36S1", "size": 86500.0},
+    {"name": "紫光, UStor N1016", "size": 55000.0},
+    {"name": "Cenby新邦, SNT3508(阵列安全NAS)桌面网络存储 16TB", "size": 13800.0},
+    {"name": "LTHPC（联泰集群）, LT-5028A-TN4", "size": 6795.0}
+   ]
+  },
+  {
+   "name": "虚拟磁带库中档及以上",
+   "children": [
+    {"name": "EMC, DD4200", "size": 577500.0},
+    {"name": "NetStor, NRS2100", "size": 429600.0},
+    {"name": "华为, OceanStor VTL6900(增强版+20TB容量", "size": 390300.19},
+    {"name": "曙光, DBstor100", "size": 249500.0}
+   ]
+  },
+  {
+   "name": "虚拟磁带库低档",
+   "children": [
+    {"name": "inspur浪潮, DP1000-M1", "size": 415358.0},
+    {"name": "天融信, TMB-0619-P", "size": 376600.0}
+   ]
+  }
+ ]
+}

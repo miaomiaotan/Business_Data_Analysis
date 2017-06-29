@@ -1,0 +1,197 @@
+{
+"name": "server",
+"children": [
+  {
+  "name": "GPU并行运算服务器中、低档",
+  "children": [
+    {"name": "inspur浪潮, NF8460M4", "size": 3908898.0},
+    {"name": "inspur浪潮, NF5270M4", "size": 1444156.0},
+    {"name": "戴尔, Dell PowerEdge R730", "size": 642243.0},
+    {"name": "华为, RH2288H V2+2*E5-2620V2处理器+32GB 内存", "size": 593506.2},
+    {"name": "惠普, ML350 Gen9", "size": 374184.0},
+    {"name": "华三（H3C）, H3C UIS R390 G2【配置升级", "size": 85584.0},
+    {"name": "LTHPC（联泰集群）, LT-7038A", "size": 85180.0},
+    {"name": "华三（H3C）, H3C UIS R390 G2", "size": 50000.0},
+    {"name": "LTHPC（联泰集群）, LT-7048A", "size": 26700.0},
+    {"name": "曙光, W560-G", "size": 19500.0}
+   ]
+  },
+  {
+  "name": "GPU并行运算服务器高档",
+  "children": [
+    {"name": "戴尔, Dell PowerEdge R730", "size": 1762234.0},
+    {"name": "inspur浪潮, TS860G3", "size": 1105000.0},
+    {"name": "Lenovo systemX, System x3650M5", "size": 1005485.0},
+    {"name": "曙光, W580I-G", "size": 989475.0},
+    {"name": "华为, RH2288H V3+2*E5-2609V3处理器+64GB DDR4 内存", "size": 609554.55},
+    {"name": "inspur浪潮, NF5288M4", "size": 444980.0},
+    {"name": "曙光, W780-G", "size": 346962.0},
+    {"name": "华为, RH5885H V3+4*E7-4809V3处理器+64GB DDR4 内存", "size": 317654.97},
+    {"name": "Oracle（Sun）, PCA compute server", "size": 149179.0},
+    {"name": "容天, SCS4450", "size": 113600.0},
+    {"name": "华三（H3C）, H3C UIS R390 G2【配置升级】", "size": 47697.0}
+   ]
+  },
+  {
+  "name": "MIC并行服务器",
+  "children": [
+    {"name": "戴尔, Dell PowerEdge R730XD", "size": 2129929.0},
+    {"name": "inspur浪潮, NF5280M4", "size": 1684700.0},
+    {"name": "inspur浪潮, NF5568M4", "size": 779900.0},
+    {"name": "超云, R9480 G10", "size": 240000.0},
+    {"name": "戴尔, Dell PowerEdge R430", "size": 192288.0},
+    {"name": "戴尔, Dell PowerEdge C6320", "size": 101240.0},
+    {"name": "LTHPC（联泰集群）, LT-7048GR-TR", "size": 97400.0},
+    {"name": "曙光, A840", "size": 43550.0}
+   ]
+  },
+  {
+  "name": "UNIX服务器",
+  "children": [
+    {"name": "Lenovo（联想）, ThinkServer RQ940", "size": 2886988.0},
+    {"name": "新云东方, NA6814(6814-A1C)", "size": 1028300.0},
+    {"name": "Lenovo systemX, System x3950X6", "size": 928086.0},
+    {"name": "新云东方, NA7822(7822-A1C)", "size": 734054.0},
+    {"name": "曙光, I980-G10（支持双四路）", "size": 240860.0}
+   ]
+  },
+  {
+  "name": "刀片服务器中档",
+  "children": [
+    {"name": "Lenovo systemX, Flex system x240M5", "size": 1808972.0},
+    {"name": "戴尔, Dell PowerEdge M630", "size": 1771788.0},
+    {"name": "曙光, CB85-G10", "size": 618800.0},
+    {"name": "华为, CH220 V3+2*E5-2609V3处理器+32GB DDR4 内存", "size": 257686.96},
+    {"name": "华为, CH222 V3+2*E5-2609V3处理器+32GB DDR4 内存", "size": 172132.68},
+    {"name": "inspur浪潮, NX5460M4", "size": 126500.0},
+    {"name": "华三（H3C）, UIS-B390-G2【配置升级】", "size": 121244.0},
+    {"name": "华三（H3C）, UIS-B390-G2", "size": 26002.0},
+    {"name": "戴尔, Dell PowerEdge FC630", "size": 15401.0}
+   ]
+  },
+  {
+  "name": "刀片服务器低档",
+  "children": [
+    {"name": "曙光, CX50-G20", "size": 1126388.0},
+    {"name": "华为, CH121 V3-32GB+2*E5-2609V3处理器+32GB DDR4 内存", "size": 982037.7},
+    {"name": "华为, CH121 V3-含刀片机箱+1*E5-2609V3处理器+16GB DDR4 内存", "size": 761851.01},
+    {"name": "惠普, BL460c Gen9 Graphics Svr Blade", "size": 401174.0},
+    {"name": "戴尔, Dell PowerEdge M630", "size": 318745.0},
+    {"name": "inspur浪潮, NX5440M4", "size": 221805.0},
+    {"name": "LTHPC（联泰集群）, LT-6028TR", "size": 13200.0}
+   ]
+  },
+  {
+  "name": "刀片服务器高档",
+  "children": [
+    {"name": "Lenovo systemX, Flex System x480 X6", "size": 1415539.0},
+    {"name": "华为, CH242 V3-4809+4*E7-4809V3处理器+64GB DDR4内存", "size": 1275817.76},
+    {"name": "曙光, CB80-G20", "size": 400000.0},
+    {"name": "戴尔, Dell PowerEdge FC830", "size": 366201.0},
+    {"name": "华为, CH242 V3-4820+4*E7-4820V3处理器+64GB DDR4 内存", "size": 330564.0},
+    {"name": "戴尔, Dell PowerEdge M830", "size": 222576.0}
+   ]
+  },
+  {
+  "name": "塔式服务器中档",
+  "children": [
+    {"name": "戴尔, Dell PowerEdge T630", "size": 1018690.0},
+    {"name": "惠普, ML150 Gen9", "size": 487829.0},
+    {"name": "Lenovo（联想）, ThinkServer TD350", "size": 397766.0},
+    {"name": "Lenovo systemX, System x3500M5", "size": 313369.0},
+    {"name": "inspur浪潮, P8000", "size": 286680.0},
+    {"name": "PowerLeader（宝德）, PR4620G", "size": 96080.0},
+    {"name": "云海麒麟, YH-5610v3", "size": 27200.0},
+    {"name": "曙光, W550-G", "size": 24960.0},
+    {"name": "清华同方, 超强TP270", "size": 24800.0},
+    {"name": "强氧, 强氧 TS5700 V3/262016", "size": 20200.0}
+   ]
+  },
+  {
+  "name": "塔式服务器低档",
+  "children": [
+    {"name": "Lenovo（联想）, ThinkServer TS150", "size": 1203930.0},
+    {"name": "戴尔, Dell PowerEdge T330", "size": 283432.0},
+    {"name": "戴尔, Dell PowerEdge T130", "size": 173660.0},
+    {"name": "inspur浪潮, NP3020M3", "size": 109900.0},
+    {"name": "Lenovo systemX, System x3100M5", "size": 75842.0},
+    {"name": "清华同方, 超强TP180", "size": 26840.0},
+    {"name": "曙光, W320-G", "size": 17255.0},
+    {"name": "超云, T8310 G10", "size": 17078.0},
+    {"name": "曙光, I210-G", "size": 15600.0}
+   ]
+  },
+  {
+  "name": "塔式服务器高档",
+  "children": [
+    {"name": "戴尔, Dell PowerEdge T630", "size": 1520894.0},
+    {"name": "Lenovo（联想）, ThinkServer TD350", "size": 1036712.0},
+    {"name": "惠普, ML350 Gen9", "size": 771766.0},
+    {"name": "Lenovo systemX, System x3500M5", "size": 770922.0},
+    {"name": "inspur浪潮, P8000", "size": 604275.0},
+    {"name": "超云, T8520 G10", "size": 464411.0},
+    {"name": "曙光, W560-G20", "size": 320578.0},
+    {"name": "曙光, W760-G", "size": 274560.0},
+    {"name": "清华同方, 超强TP370", "size": 17900.0},
+    {"name": "LTHPC（联泰集群）, LT-7049R", "size": 15215.0},
+    {"name": "云海麒麟, YH-5610v3", "size": 12800.0}
+   ]
+  },
+  {
+  "name": "机架式服务器中、低档",
+  "children": [
+    {"name": "华为, RH2288 V3+2*E5-2609V3处理器+16GB DDR4内存", "size": 1941475.86},
+    {"name": "inspur浪潮, NF5170M4", "size": 1711520.0},
+    {"name": "Lenovo（联想）, ThinkServer RD650", "size": 1540762.0},
+    {"name": "惠普, DL380 Gen9", "size": 1539585.0},
+    {"name": "曙光, I620-G", "size": 1134768.0},
+    {"name": "inspur浪潮, NF5280M4", "size": 1082265.0},
+    {"name": "Lenovo（联想）, ThinkServer RD450", "size": 950137.0},
+    {"name": "Lenovo systemX, System x3650M5", "size": 943522.0},
+    {"name": "超云, R5210 G10", "size": 860338.0},
+    {"name": "戴尔, Dell PowerEdge R630", "size": 744172.0},
+    {"name": "PowerLeader（宝德）, PR2510G2", "size": 704280.0},
+    {"name": "惠普, DL360 Gen9", "size": 505292.0},
+    {"name": "超云, R6240 G10", "size": 504677.0},
+    {"name": "戴尔, Dell PowerEdge R730", "size": 472050.0},
+    {"name": "Lenovo systemX, System x3550M5", "size": 456722.0},
+    {"name": "华三（H3C）, H3C UIS R390 G2（8SFF主机）", "size": 422173.0},
+    {"name": "PowerLeader（宝德）, PR2012GS1-CD1", "size": 329660.0},
+    {"name": "华为, RH1288 V3+1*E5-2609处理器+8GB DDR4内存", "size": 246918.72},
+    {"name": "曙光, A620", "size": 245320.0},
+    {"name": "清华同方, 超强TR730", "size": 137246.0},
+    {"name": "思腾合力, IR4200", "size": 130760.0},
+    {"name": "LTHPC（联泰集群）, LT-6028R", "size": 120000.0},
+    {"name": "汉柏, C640", "size": 86000.0},
+    {"name": "思腾合力, IR2200", "size": 71160.0},
+    {"name": "云海麒麟, YH-5210V3", "size": 57500.0},
+    {"name": "华三（H3C）, H3C UIS R190 G2(8LFF主机)", "size": 46200.0},
+    {"name": "金品, KU2455", "size": 26160.0},
+    {"name": "强氧, 强氧 RS2700 V3/262016", "size": 20000.0},
+    {"name": "ZTE中兴, ZXCLOUD R5300 G3", "size": 19057.0},
+    {"name": "金品, KU2235", "size": 10000.0}
+   ]
+  },
+  {
+  "name": "机架式服务器高档",
+  "children": [
+    {"name": "Lenovo systemX, System x3850X6", "size": 7866640.0},
+    {"name": "惠普, DL580 Gen9", "size": 6981569.0},
+    {"name": "华为, RH5885 V3+4*E7-4809处理器+32GB DDR4内存", "size": 5212970.65},
+    {"name": "戴尔, Dell PowerEdge R930", "size": 3541433.0},
+    {"name": "inspur浪潮, NF8480M4", "size": 3166896.5},
+    {"name": "曙光, I840-G20", "size": 2262878.0},
+    {"name": "inspur浪潮, TS860G3", "size": 1189800.0},
+    {"name": "曙光, I840-G", "size": 692025.0},
+    {"name": "超云, R7410 G10", "size": 486200.0},
+    {"name": "PowerLeader（宝德）, PR4860R", "size": 399026.0},
+    {"name": "金品, KU4450", "size": 380240.0},
+    {"name": "华三（H3C）, H3C UIS R690 G2", "size": 346520.0},
+    {"name": "清华同方, 超强TR930", "size": 303000.0},
+    {"name": "LTHPC（联泰集群）, LT-8049-TR", "size": 266000.0},
+    {"name": "IBM, Power System S822LC", "size": 251998.0},
+    {"name": "思腾合力, IR4202", "size": 66200.0}
+   ]
+  }
+ ]
+}

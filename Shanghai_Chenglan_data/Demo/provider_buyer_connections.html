@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="d3.v3.min.js"></script>
+    <script src="colorbrewer.js"></script>
+    <style>
+
+      /* .col{
+            transform:rotate(-45deg);
+        }  */
+
+        .tooltip{
+            position:absolute;
+            width:120;
+            height: auto;
+            font-family: simsun;
+            font-size: 10px;
+            text-align: left;
+            border-style: solid; 
+            border-width: 1px;
+            background-color:white;
+
+            border-radius: 5px;
+        }
+
+        text.text-hover {
+            fill: #00f;
+      }
+
+        text.text-highlight {
+        fill: #f00;
+      }
+
+    </style>
+    <script type="text/javascript">
+
+        function melt(matrix) {
+            // convert matrix to an array of (row_index, col_index, value)
+            // potentially slow for large matrices
+            var melted = [];
+
+            for (var irow = 0; irow < matrix.length; irow++) {
+                for (var icol = 0; icol < matrix[0].length; icol++) {
+                    melted.push({row_index:irow, col_index:icol, value:matrix[irow][icol]});
+                }
+            }
+
+            return melted;
+        }
+
+
+
+        function draw_heatmap_from_matrix(matrix, label_col, label_row) {
+            // draw heatmap, expect input: data=matrix of numbers, label_*=labels
+         //   var transition_time = 500;     ?
+
+            var margin = 200,
+                width = 1400 ,
+                height = 1000 ;
+
+            var plot_margin = 150
+                plot_width = 725 - plot_margin,
+                plot_height = 775 - plot_margin;
+
+            // Calculate accurate plot dimensions
+            var min_row_cell_height = 12;
+            var min_col_cell_width = 4;
+
+            var row_cell_height = Math.max(Math.floor(plot_height/label_row.length), 
+                    min_row_cell_height);
+            var col_cell_width = Math.max(Math.floor(plot_width/label_col.length),
+                    min_col_cell_width);
+
+            plot_width = col_cell_width * label_col.length;
+            plot_height = row_cell_height * label_row.length;
+
+            var canvas_div = d3.select("#heatmap_area");
+
+            var svg = canvas_div.append("svg")
+                    .attr("width", width + margin)
+                    .attr("height", height + margin);    //svg,1400 * 600 
+
+            var melted_matrix = melt(matrix);
+
+ 
+
+
+            var extent = d3.extent(melted_matrix, function(d) {
+                        return d.value; });     //min & max
+
+            var color_scale = d3.scale.linear()
+                                .domain(extent)
+                                .range(["white", "red"]);   
+
+            // scale for row, row is in the vertical axis
+            var row_scale = d3.scale.linear()
+                                .domain([0, label_row.length])
+                                .rangeRound([0, plot_height]);
+
+            var row_cell_height = row_scale(1);      //行高
+
+            // scale for column, column is in the horizontal axis
+            var col_scale = d3.scale.linear()
+                                .domain([0, label_col.length])
+                                .rangeRound([0, plot_width]);
+
+            var color_scale_log2 = d3.scale.log().base(2)
+                                .domain([1.0/extent[1], 1, extent[1]])
+                                .range(["lightblue", "white", "purple"]);
+
+            var col_cell_width = col_scale(1);      //列宽
+
+
+
+//draw rects
+            var plot = svg.append("g")
+                        .attr("class", "plot")      //?
+                        .attr("transform", "translate(" + plot_margin + "," + plot_margin + ")");
+
+            var cells = plot.selectAll("rect")
+                            .data(melted_matrix);
+
+            cells.enter()
+                .append("rect")
+                .attr("class", "cell")
+                .attr("width", col_cell_width)
+                .attr("height", row_cell_height)
+                .attr("x", function(d) {
+                    return col_scale(d.col_index);
+                })
+                .attr("y", function(d) {
+                    return row_scale(d.row_index);
+                })
+                .style("fill", function(d) {
+                    //return color_scale(d.value);
+                    var total_price = d.value;
+                    if (total_price < 1.0/extent[1]) {
+                        // cut off FPKM value if too small
+                        // to deal with log scale transform
+                        total_price = 1.0/extent[1];
+                    } 
+                    return color_scale_log2(total_price);
+
+                });                   //画rects
+
+
+
+// label
+            var tick_row = svg.append("g")
+                            .attr("class", "row")
+                            .attr("transform", "translate(" + plot_margin + "," + plot_margin + ")")
+                            .selectAll("text")
+                            .data(label_row);
+
+            tick_row.enter()
+                    .append("text")
+                    .attr("class", "tick row")
+                    .attr("font-size", row_scale(0.9))
+                    .text(function(d) { return d; })
+                    .style("text-anchor", "end")
+                    .attr("y", function(d, i) { return row_scale(i+1); })
+                    .on("mouseover", function(d) {d3.select(this).classed("text-hover",true);})
+                    .on("mouseout" , function(d) {d3.select(this).classed("text-hover",false);});  
+
+            var tick_col = svg.append("g")
+                            .selectAll(".tick_col")
+                            
+                            .data(label_col)
+                            .enter()
+                            .append("text")
+                            .attr("class", "col")
+                  
+                            .attr("font-size", col_scale(0.9))
+                            .text(function(d) { return d; })
+                            .attr("transform", "translate(" + plot_margin + "," + plot_margin + ") rotate(-90)" )
+                            
+                            .style("text-anchor", "left")
+                            .attr("y", function(d, i) { return col_scale(i+1); })
+                            .on("mouseover", function(d) {d3.select(this).classed("text-hover",true);})
+                            .on("mouseout" , function(d) {d3.select(this).classed("text-hover",false);});;
+ 
+
+
+//tip-box                   
+            var tooltip = d3.select("body")
+                                        .append("div")
+                                        .attr("class","tooltip")
+                                      //  .style("opacity",0.2)
+
+
+
+//mouse-event
+            cells.on("mouseover",function(d){
+                tooltip.html("购买者:"+label_row[d.row_index]+"<br/>"
+                            +"供应商:"+label_col[d.col_index]+"<br/>"
+                            +"成交额:"+d.value)
+                        .style("left", (d3.event.pageX) + "px")
+                        .style("top", (d3.event.pageY + 15) + "px")
+                        .style("opacity",1.0);
+                            
+                d3.select(this)
+                    .attr("stroke","black")
+                    .attr("stroke-width",1);
+
+                d3.selectAll(".row").classed("text-highlight",function(r,ri){
+                    return ri==(d.row_index+1);
+                 });
+
+                d3.selectAll(".col").classed("text-highlight",function(c,ci){
+                    return ci==(d.col_index);
+                });
+
+                        
+
+                })
+
+            cells.on("mouseout",function(d){
+                tooltip.style("opacity",0.0);
+
+                d3.selectAll(".row").classed("text-highlight",false);
+
+                d3.selectAll(".col").classed("text-highlight",false);            
+
+                d3.select(this)
+                    .attr("stroke","none");
+                        })
+
+                
+
+        }
+
+
+
+        function draw_heatmap(gene_data) {
+            // parse file : tsv -> gene_data
+            var label_col_full = Object.keys(gene_data[0]);   //names of all columes??
+            var label_row = [];
+            var rows = [];
+            var row = [];
+            for (var irow = 0; irow < gene_data.length; irow++) {
+                label_row.push(gene_data[irow][label_col_full[0]]);    //添加 行 的标签
+                row = [];
+                for (var icol = 1; icol < label_col_full.length; icol++) {
+                    row.push(parseFloat(gene_data[irow][label_col_full[icol]]));   //每一行的值
+                }
+                rows.push(row);    //返回matrix,纯数字
+            }
+            
+
+            var label_col = label_col_full.slice(1);    //return array：label_col_full 从1到末尾
+
+            draw_heatmap_from_matrix(rows, label_col, label_row);
+
+        }
+    </script>
+</head>
+
+
+<body>
+    <script type="text/javascript">
+        d3.csv("relations2.csv", draw_heatmap);
+    </script>
+    <div id="heatmap_area">
+    </div>
+</body>
+</html>
